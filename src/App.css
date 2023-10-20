@@ -1,0 +1,1322 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFF7ED;
+  margin: 0;
+}
+
+/* Navigation */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+  box-shadow:  2px 2px 4px #e0dfdf;
+}
+
+
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+
+.home-link {
+  grid-column: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  color: #161616;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.home-link:hover{
+  text-decoration: underline;
+}
+
+.host-link {
+  grid-column: 10;
+  justify-self: start;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about-link {
+  grid-column: 11;
+  justify-self: start;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.van-link {
+  grid-column: 12;  
+  justify-self: start;
+  color: #4D4D4D;
+  font-family: "inter", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.login-link {
+  grid-column: 13;  
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.logout-link {
+  text-decoration: none;
+  color: #4D4D4D;
+  grid-column: 13;  
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-family: inter;
+  font-weight: 600;
+
+}
+
+.login-link img {
+  width: 95%;
+}
+
+
+.about-link:hover, .van-link:hover {
+  text-decoration: underline;
+}
+
+/* Home Page */
+
+/* Dimmed background for the 'main' element */
+main {
+  background: url("../src/assets/background.jpg");
+  background-position: 0px -290px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 72vh;
+  padding: 2rem;
+  display: grid;
+  position: relative; /* Add this */
+  display: flex;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0009; /* Adjust the opacity here as needed */
+  z-index: 1;
+}
+
+
+.main-section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  z-index: 10;
+  justify-content: center;
+  width: 40%;
+}
+
+
+main h1 {
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: left;
+  color: white;
+  margin: 0;
+  grid-row: 10;
+}
+
+
+main h2 {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+  margin: 0;
+  grid-row: 10;
+}
+
+main p {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
+  color: white;
+  grid-row: 11;
+}
+
+main a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: #FF8C38;
+  text-decoration: none;
+  color: white;
+  font-family: Inter;
+  font-size: 1rem;
+  text-align: center;
+  grid-row: 12;
+  border-radius: 0.3rem;
+  padding: 2%;
+}
+
+main a:hover {
+  transform: translate(1px, 1px);
+}
+
+/* Footer */
+
+footer {
+  padding: 2rem 0;
+  /* background: #252525; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow:  2px -2px 4px #e0dfdf;
+}
+
+footer small {
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  color: #161616;
+}
+
+/* About page */
+
+.background-container {
+  background: url("../src/assets/about.jpg") no-repeat;
+  min-height: 25vh;
+  background-size: 100%;
+  background-position: 0 -450px;
+}
+
+.about-container {
+  min-height: 83vh;
+
+}
+
+.about-container img{
+  max-width: 100%;
+
+}
+
+.about-container h2 {
+  padding: 2rem 0 0 0;
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.about-container p {
+  font-family: Inter;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+
+}
+
+.about-info {
+  padding: 0 2rem;
+}
+
+.about-container .vans-shoutout-container {
+  background-color: #FFCC8D;
+  border-radius: 0.5rem;
+  padding: 2.8rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+
+
+.vans-shoutout-container h3 {
+  font-family: Inter;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+.vans-shoutout-container a {
+  background: #161616;
+  color: #FFF7ED;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+}
+
+
+/* Media Query */
+@media screen and (min-width:1024px) {
+  header {
+    padding: 1.5rem 0rem;
+  }
+
+  .about-info {
+    padding: 0 7rem;
+  }
+
+  .background-container {
+   min-height: 50vh;
+  }
+
+}
+
+/* Vans Page */
+.vans-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25.3rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 7rem 0 7rem;
+}
+
+@media screen and (min-width:320px) and (max-width:1020px) {
+  .vans-container {
+    padding: 0 2rem;
+  }
+}
+
+.vans-container a {
+  text-decoration: none;
+  color: #161616;
+}
+
+.vans-container h1 {
+  grid-row: 1;
+  grid-column: 1/-1;
+  margin: 0;
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  color: #161616;
+}
+
+.vans-container-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-row: 2;
+  grid-column: 1/-1;
+  text-align: left;
+}
+
+.vans-container-filters button {
+  border: 0;
+  margin-right: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 0.4rem;
+  color: #4D4D4D;
+  text-transform: capitalize;
+  text-decoration: none;
+  background: #FFEAD0;
+  cursor: pointer;
+}
+
+.vans-container-filters button.simpleButton.selected {
+  background: #E17654;
+  color: #FFEAD0; ;
+}
+
+.vans-container-filters button.luxuryButton.selected {
+  background: #161616;
+  color: #FFEAD0; ;
+}
+
+.vans-container-filters button.ruggedButton.selected {
+  background: #115E59;
+  color: #FFEAD0; ;
+}
+
+
+.vans-container-filters button.clearFilterButton {
+  padding: 0;
+  background: none;
+  border-bottom: 1px solid #4D4D4D;
+  border-radius: 0;
+}
+
+
+@media screen and (max-width:562px) {
+  .vans-container-filters a:last-of-type {
+    margin-top: 1rem;
+  }
+}
+
+/* Login Page */
+
+.login-page-section {
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+.login-page-section h1 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  color: #161616;
+}
+
+.login-page-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.login-page-section form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page-section form div input {
+  border-radius: 0.2rem;
+  border: 0.01rem solid rgb(222, 220, 220);
+  font-size: 1.5rem;
+  text-indent: 1rem;
+  padding: 0.5rem 0rem;
+  width: 500px;
+}
+
+.login-page-section form button {
+    background-color: #ff8c38;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+    padding: 0.6rem;
+    width: 100%;
+    color: white;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.login-page-section form button:disabled {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+.login-page-section form div input:first-of-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.login-page-section form div input:last-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+}
+
+.login-error {
+  margin: 0;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  color: red;
+}
+
+/* Host Page */
+.host-layout {
+  padding: 0 7rem;
+}
+
+/* Dashboard */
+
+
+.host-dashboard-earnings {
+  margin: 2rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffead0;
+  align-items: center;
+  padding: 2rem;
+}
+
+.host-dashboard-earnings .info h1 {
+  font-size: 2rem;
+  color: #161616;
+  margin: 0;
+  font-family: inter;
+}
+
+
+.host-dashboard-earnings .info p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #4d4d4d;
+  font-family: inter;
+}
+
+.host-dashboard-earnings .info p > span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+.host-dashboard-earnings .info h2 {
+  font-size: 2rem;
+  color: #161616;
+  margin: 0;
+  font-family: inter;
+  font-weight: 900;
+}
+
+.host-dashboard-earnings  a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #161616;
+  font-family: inter;
+}
+
+.host-dashboard-reviews {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  background-color: #ffddb2;
+  align-items: center;
+  padding: 2rem;
+}
+
+.host-dashboard-reviews h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #161616;
+  margin: 0;
+  font-family: inter;
+}
+
+.host-dashboard-reviews .star {
+  margin-left: 1rem;
+  color: #ff8c38;
+  font-size: 1.3rem;
+}
+
+.host-dashboard-reviews p {
+  font-size: 1rem;
+  margin-right: auto;
+  color: #161616;
+  font-family: inter;
+}
+
+.host-dashboard-reviews p span {
+  font-weight: bold;
+}
+
+.host-dashboard-reviews  a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #161616;
+  font-family: inter;
+}
+
+.host-dashboard-vans {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.host-dashboard-vans .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.host-dashboard-vans .top h2 {
+  font-size: 1.6rem;
+  color: #161616;
+  margin: 0;
+  font-family: inter;
+}
+
+.host-dashboard-vans .top a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #161616;
+  font-family: inter;
+}
+
+
+.host-van-single {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  gap: 25rem;
+  border-radius: 0.2rem;
+}
+
+.host-van-single img {
+  max-width: 25%;
+  border-radius: 0.4rem;
+}
+
+.host-van-single div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.host-van-single div h3 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-van-single div p {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #161616;
+}
+
+.host-van-single a {
+  /* margin: 0 auto; */
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #161616;
+  font-family: inter; 
+}
+
+/* Host-Income */
+.host-income {
+  text-align: left;
+}
+
+.host-income h1 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-income p {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-income p span {
+  font-weight: bold;
+}
+
+.host-income h2 {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-income img {
+  max-width: 30%;
+}
+
+.info-header h3 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+} 
+
+.info-header p {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.info-header p span {
+  font-weight: bold;
+}
+
+.transactions {
+  margin-bottom: 2rem;
+}
+
+.transactions .transaction {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: #fff;
+ padding: 0.5rem;
+ align-items: center;
+ margin-top: 0.8rem;
+}
+
+.transactions .transaction h3 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+/* host-review */
+.host-review {
+  text-align: left;
+}
+
+
+.host-review .top-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.host-review .top-text h2 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-review .top-text p {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-review .top-text p span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.review-graph {
+  max-width: 40%;
+  margin: 2rem 0;
+}
+
+.review-star {
+  color: #ff8c38;
+  font-size: 1.6rem;
+}
+
+.review {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 0 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  display: flex;
+  align-items: f;
+  justify-content: flex-start;
+}
+
+.info .name {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0 0;
+  color: #161616;
+
+}
+
+.info .date {
+  font-family: Inter;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1.3rem 0 0 0;
+  color: #8c8c8c;
+  margin-left: 0.5rem;
+  
+} 
+
+.review-desc{
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+  color: #161616;
+}
+
+/* Vans component */
+
+.van-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.van-details img {
+  width: 100%;
+}
+
+.van-details .van-info {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 2.4rem);
+  margin-top: 0.5rem;
+  
+}
+
+.van-info h2 {
+  grid-column: 1/7;
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+
+}
+
+.van-info span:first-of-type {
+  grid-column: 8;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: right;
+
+}
+
+.van-info span:first-of-type span {
+  font-family: Inter;
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: #161616;
+  padding: 0;
+}
+
+.van-info span:last-of-type {
+  grid-row: 2;
+  grid-column: 1/3;
+
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: #FFEAD0;
+  text-transform: capitalize;
+}
+
+.simple {
+  background: #E17654;
+}
+
+.rugged {
+  background: #115E59;
+}
+
+.luxury {
+  background: #161616;
+}
+
+
+
+/* Van-Details-Page */
+
+.van-details-page {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 7rem 0 7rem;
+}
+
+@media screen and (min-width:320px) and (max-width:1020px) {
+  .van-details-page {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
+
+.van-details-page a:first-child {
+  text-decoration: none;
+}
+
+.van-details-page img {
+  max-width: 100%;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.nav-container i {
+  margin-right: 0.6rem;
+  color: #858585;
+}
+
+.nav-container span {
+  border-bottom: 1px solid #161616;
+  color: #201F1D;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.van-details-page .van-info {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 ;
+}
+
+.van-details-page .van-info .van-info-type {
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.3rem;
+  color: #FFEAD0;
+  text-transform: capitalize;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.van-details-page .van-info h2 {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 0.8rem;
+
+}
+
+.van-details-page .van-info span {
+  color: #161616;
+  align-self: self-start;
+  padding: 0;
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
+}
+
+.van-details-page .van-info span span {
+  color: #161616;
+  align-self: self-start;
+  padding: 0;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  text-transform: lowercase;
+}
+
+.van-details-page .van-info p {
+  font-family: Inter;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+  margin: 0.8rem 0 0 0;
+  
+}
+
+.van-details-page .van-info a {
+  background: #FF8C38;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: Inter;
+  padding: 1rem;
+  margin: 0.8rem 0 0 0;
+  border-radius: 0.3rem;
+}
+
+.loading-text {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+@media screen and (min-width:320px) and (max-width:1020px) {
+  .loading-text {
+    padding: 2rem;
+  }
+}
+
+/* Host Navigation */
+.host-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3%;
+  padding: 2rem 2rem 0 0rem;
+}
+
+.Dashboard-link {
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.income-link {
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.vans-link {
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.reviews-link {
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+
+/* Host vans list subPage */
+.host-vanList-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.host-vanList-container h1 {
+  text-align: left;
+  align-self: flex-start;
+  margin: 0;
+  font-family: Inter;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.host-VansList-link {
+  text-decoration: none;
+}
+
+.host-vanList-item {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  gap: 5%;
+  border-radius: 0.2rem;
+}
+
+.host-vanList-item img {
+  max-width: 25%;
+  border-radius: 0.4rem;
+}
+
+.host-vanList-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.host-vanList-item div h2 {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #161616;
+  margin-bottom: 0.5rem;
+}
+
+.host-vanList-item div span {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #161616;
+}
+
+
+/* Back Button */
+.vanDetail-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+
+.back-button {
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #201F1D;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+/* HostVanDetail Page */
+
+.HostVanDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.vanDetail-container > div {
+  background: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 2rem 2rem 2rem;
+  gap: 5%;
+  border-radius: 0.2rem;
+}
+
+div.vanDetail-info-container {
+  padding-bottom: 0;
+}
+
+.vanDetail-container img {
+  max-width: 30%;
+  border-radius: 0.1rem;
+} 
+
+.vanDetail-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.vanDetail-info h2 {
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+  color: #161616;
+}
+
+.vanDetail-info .vanDetail-price {
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #161616;
+}
+
+.vanDetail-info .vanDetail-price span {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.vanDetail-info .vanDetail-type {
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.3rem;
+  color: #FFEAD0;
+  text-transform: capitalize;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+@media screen and (min-width:320px) and (max-width:520px) {
+  .vanDetail-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .host-vanList-item div h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* vanDetail-container navigation */
+
+.subPage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.vanDetail-container nav {
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.vanDetail-container nav a {
+  text-decoration: none;
+  font-family: "inter", sans-serif;
+  color: #4D4D4D;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.subPage-container .detail-container {
+  text-align: left;
+}
+
+.detail-container h4 {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.detail-container span {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.van-pricing {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 700;
+  align-self: flex-start;
+  margin-bottom: 0;
+
+}
+
+.van-pricing span {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.van-photos {
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+
+.visibility-heading {
+  margin-bottom: 0;
+}
+
+
+/* 404 Not Found Page  */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.not-found-container h1 {
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.not-found-container a {
+  display: block;
+  background: #201F1D;
+  color: #FFEAD0;
+  padding: 1rem 2rem;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  width: 70%;
+}
